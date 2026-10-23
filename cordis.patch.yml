@@ -1,0 +1,14 @@
+# Report the experimental Auto review gate in Simplified Chinese.
+#
+# `promptChinese` rewrites the ask prompt shown when the reviewer denies a call
+# and the approval policy hands that decision to the user, so the prompt is
+# Chinese whatever the UI language is. `reviewerChinese` appends one language
+# requirement to the reviewer's fixed system prompt, so the deny reason the user
+# reads is written in Chinese. Set either key to false to keep the shipped
+# behaviour for that surface; the row can also be disabled in the Plugin Manager.
+- insert:
+    - id: auto-review-zh
+      name: '@local/dsh-auto-review-zh'
+      config:
+        promptChinese: true
+        reviewerChinese: true
